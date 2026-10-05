@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 
 # Page configuration
-st.set_page_config(page_title="Solar Panel Defect Detection", page_icon="??", layout="centered")
+st.set_page_config(page_title="Solar Panel Defect Detection", page_icon="sugar", layout="centered")
 
 st.title("?? Solar Panel Defect Detection Platform")
 st.write("Upload a solar panel image to automatically detect defects using YOLOv8.")
@@ -44,7 +44,7 @@ if uploaded_file is not None:
     st.subheader("?? Inspection Report")
     boxes = results[0].boxes
     if len(boxes) == 0:
-        st.success("? Panel is completely Non-Defective!")
+        st.success(" Panel is completely Non-Defective!")
     else:
         for box in boxes:
             cls_id = int(box.cls[0])
